@@ -13,7 +13,7 @@ Requests are made with [Axios library](https://github.com/axios/axios) with [sup
 ## Installation
 
 ```
-npm install --save @woocommerce/woocommerce-rest-api
+npm install --save @carmineconversano/woocommerce-rest-api-fork
 ```
 
 ## Getting started
