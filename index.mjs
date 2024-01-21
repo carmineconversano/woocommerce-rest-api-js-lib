@@ -161,14 +161,12 @@ export default class WooCommerceRestApi {
     const data = {
       consumer: {
         key: this.consumerKey,
-        secret: this.consumerSecret
+        secret: this.consumerSecret,
       },
       signature_method: "HMAC-SHA256",
       hash_function: (base, key) => {
-        return createHmac("sha256", key)
-          .update(base)
-          .digest("base64");
-      }
+        return createHmac("sha256", key).update(base).digest("base64");
+      },
     };
 
     return new OAuth(data);
@@ -188,7 +186,7 @@ export default class WooCommerceRestApi {
     const url = this._getUrl(endpoint, params);
 
     const headers = {
-      Accept: "application/json"
+      Accept: "application/json",
     };
     // only set "User-Agent" in node environment
     // the checking method is identical to upstream axios
@@ -201,32 +199,32 @@ export default class WooCommerceRestApi {
     }
 
     let options = {
-      url: url,
-      method: method,
+      url,
+      method,
       responseEncoding: this.encoding,
       timeout: this.timeout,
       responseType: "json",
-      headers
+      headers,
     };
 
     if (this.isHttps) {
       if (this.queryStringAuth) {
         options.params = {
           consumer_key: this.consumerKey,
-          consumer_secret: this.consumerSecret
+          consumer_secret: this.consumerSecret,
         };
       } else {
         options.auth = {
           username: this.consumerKey,
-          password: this.consumerSecret
+          password: this.consumerSecret,
         };
       }
 
       options.params = { ...options.params, ...params };
     } else {
       options.params = this._getOAuth().authorize({
-        url: url,
-        method: method
+        url,
+        method,
       });
     }
 
