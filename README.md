@@ -1,4 +1,6 @@
-# WooCommerce REST API - JavaScript Library
+# WooCommerce REST API - JavaScript Library (FORK)
+
+This is a fork of the [original WooCommerce library](https://github.com/woocommerce/woocommerce-rest-api-js-lib) with updated dependencies and fixed bugs.
 
 New JavaScript library for WooCommerce REST API, supports CommonJS (CJS) and Embedded System Module (ESM).
 
@@ -29,7 +31,7 @@ Check out the WooCommerce API endpoints and data that can be manipulated in <htt
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
 const api = new WooCommerceRestApi({
-  url: "http://example.com",
+  url: "https://example.com",
   consumerKey: "ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   consumerSecret: "cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   version: "wc/v3"
@@ -42,7 +44,7 @@ const api = new WooCommerceRestApi({
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 
 const api = new WooCommerceRestApi({
-  url: "http://example.com",
+  url: "https://example.com",
   consumerKey: "ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   consumerSecret: "cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   version: "wc/v3"
@@ -125,7 +127,7 @@ const api = new WooCommerceRestApi({
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 
 const api = new WooCommerceRestApi({
-  url: "http://example.com",
+  url: "https://example.com",
   consumerKey: "ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   consumerSecret: "cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   version: "wc/v3"
@@ -218,4 +220,4 @@ api.delete("products/1", {
 
 ## Changelog
 
-[See changelog for details](https://github.com/woocommerce/woocommerce-rest-api-js-lib/blob/master/CHANGELOG.md)
+[See changelog for details](https://github.com/carmineconversano/woocommerce-rest-api-js-lib/blob/master/CHANGELOG.md)
